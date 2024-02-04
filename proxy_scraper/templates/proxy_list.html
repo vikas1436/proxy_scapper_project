@@ -1,0 +1,39 @@
+<!-- templates/proxy_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy List</title>
+</head>
+
+<body>
+    <h1>Proxy List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Country</th>
+                <th>Uptime</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proxy in proxies %}
+            <tr>
+                <td>{{ proxy.ip }}</td>
+                <td>{{ proxy.port }}</td>
+                <td>{{ proxy.protocol }}</td>
+                <td>{{ proxy.country }}</td>
+                <td>{{ proxy.uptime }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

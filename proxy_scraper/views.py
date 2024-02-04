@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from .models import Proxy
 
-# Create your views here.
+def proxy_list(request):
+    proxies = Proxy.objects.all()
+    print(proxies)
+    context ={
+        'proxies': proxies
+    }
+    return render(request, 'proxy_list.html', context)
