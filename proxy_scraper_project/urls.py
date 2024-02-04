@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from proxy_scraper.views import proxy_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', proxy_list, name='proxy_list'),
 ]
