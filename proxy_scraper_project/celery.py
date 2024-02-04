@@ -24,6 +24,6 @@ def debug_task(self):
 app.conf.beat_schedule = {
     'scrape-every-day': {
         'task': 'proxy_scraper.tasks.scrape_proxy_list',
-        'schedule': crontab(minute=20, hour=18),  # Run the task every day at midNight
+        'schedule': crontab(minute=0, hour=0),  # Run the task every day at midNight
     },
 }
